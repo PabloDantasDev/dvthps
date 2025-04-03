@@ -1,0 +1,11 @@
+deployment:
+  tasks:
+    - export GENERAL=/home/devtechps/repositories/dev/*
+    - export DOMAIN=/home/devtechps/repositories/dev/armazem_paraiba/*
+    - export GENERALDEPLOY=/home/devtechps/public_html/dev
+
+    
+    
+    - /bin/cp -R $GENERAL $GENERALDEPLOY
+
+    - /bin/cp -R $DOMAIN $OPAFRUTAS
