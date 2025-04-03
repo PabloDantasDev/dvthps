@@ -1,0 +1,145 @@
+.container, .container-fluid{
+    padding: 0px 20px;
+}
+
+#clock{
+    font-size:25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* #clockParent{
+} */
+
+form .row{
+    display:flex;
+}    
+
+.button-icon {
+    --icon-size: 30px;
+    font-size: var(--icon-size);
+    overflow: hidden;
+    min-height: var(--icon-size);
+    align-content: center;
+    min-width: var(--icon-size);
+    padding: 10px;
+}
+
+.button-title {
+    width: -webkit-fill-available;
+    font-size: 18px;
+    font-weight: 1000;
+	min-width: fit-content;
+}
+
+.form-actions{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.form-actions .fecha-form-btn{
+    width: auto;
+}
+
+
+.form-actions button {
+    width: 17rem;
+    padding: 6px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+	border-collapse: separate;
+}
+
+.modal-dialog {
+    transform: translate(0, -50%);
+    top: 30%;
+    margin: 0 auto;
+    text-align: -webkit-center;
+}
+
+/* Desktop specifics */
+@media(min-width:992px){
+    .form-actions{
+        justify-content: left;
+    }
+	.fecha-form-btn{
+		width:14rem;
+	}
+}
+
+@media(max-width:992px){
+    form .row{
+        display: grid;
+        justify-items: center;
+    }
+    form .row div{
+        width: 100%;
+    }
+    form .row div:nth-child(2){
+        text-align: center;
+    }
+
+    form .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:768px){
+    #clockParent{
+        margin-right:0%;
+    }
+    form .row{
+        display: block;
+    }
+}
+
+/* Mobile specifics */
+@media(max-width: 480px){
+    @media(min-width: 360px){
+        .last-button{
+            width: 30rem;
+        }
+    }
+
+    .container, .container-fluid{
+        padding: 0px;
+    }
+
+    .page-footer{
+        display:none;
+    }
+
+    .form-actions .fecha-form-btn{
+        width: 47%;
+    }
+
+    /* .fecha-form-btn {
+        width: -webkit-fill-available;
+        width: -moz-available;
+    }
+
+    .form-actions button{
+        min-width: inherit;
+    }
+
+    .fecha-form-btn:first-child {
+        min-width: -webkit-fill-available;
+        min-width: -moz-available;
+    } */
+
+    .dataTables_length {
+        display: none;
+    }
+
+    .table-scrollable{
+        min-height: 150px;
+    }
+
+    .dataTables_info {
+        display: none;
+    }
+}

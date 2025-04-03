@@ -1,0 +1,249 @@
+@media print {
+    body {
+        margin: 1cm;
+        transform-origin: left top;
+        /* overflow: hidden;
+        position: absolute; */
+        transform: scale(0.96);
+    }
+    
+    @page {
+        size: A4 landscape !important;
+        margin: 1cm;
+      }
+
+    .table-resumo {
+        width: 100% !important;
+        page-break-inside: avoid !important;
+        border-collapse: collapse !important;
+        border: 0 !important;
+    }
+    
+    .table th, .table td {
+        padding-top: 0px !important;
+        padding-right: 3.2px !important;
+        padding-bottom: 0px !important;
+        padding-left: 3.2px !important;
+        text-align: center !important;
+        border: 0.01px solid black !important;
+        page-break-inside: avoid !important;
+    }
+    
+    #impressao {
+        left: 53rem !important;
+    }
+
+    #exporta{
+        display: none;
+    }
+    .table-bottom{
+        margin-bottom: 150px !important;
+    }
+}
+
+.company-info>td{
+    text-align: left;
+}
+
+#exporta{
+    text-align: center;
+}
+
+#exporta > #btnImprimir{
+  padding: 10px 15px; 
+  font-size: 16px;
+  background-color: #36c6d3; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+#exporta > #btnCsv{
+  padding: 10px 15px; 
+  font-size: 16px;
+  background-color: #4CAF50; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+#exporta > #btnCsv:hover{
+    background-color: #45a049; 
+}
+
+#exporta > #btnImprimir:hover{
+    background-color: #259ca7; 
+}
+
+#btnImprimir,
+#btnCsv{
+    display: inline-block;
+    margin-right: 10px; /* Espaço entre os botões, opcional */
+}
+
+
+/* table thead tr th:nth-child(3),
+table thead tr th:nth-child(7),
+table thead tr th:nth-child(11),
+table td:nth-child(3),
+table td:nth-child(7),
+table td:nth-child(11) {
+	border-right: 2px solid black;
+} */
+
+body {
+    /* zoom: 29%; */
+    font-family: Arial, sans-serif;
+    font-size: 8px;
+    margin: 0;
+    padding: 0;
+    /* font-size: 40%; */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 3px;
+}
+
+.header img {
+    max-height: 50px;
+}
+
+.header h1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.right-logo {
+    display: flex;
+    align-items: center;
+}
+
+.right-logo img {
+    max-height: 20px;
+    margin-right: 10px;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px;
+    border: 0.01px solid black;
+    page-break-inside: avoid;
+}
+
+.table thead {
+    background-color: #f2f2f2;
+}
+
+.table th,
+.table td {
+    padding-top: 0px;
+    padding-right: 13px;
+    padding-bottom: 0px;
+    padding-left: 13px;
+    text-align: center;
+    border: 0.01px solid black;
+    page-break-inside: avoid;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.table-header {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: left;
+    border: 0px transparent;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.signature-block {
+    display: inline-block;
+    width: 45%;
+}
+
+.signature-block p {
+    margin: 5px 0;
+}
+
+.table-info {
+    width: 100%;
+    page-break-inside: avoid;
+}
+
+.table-info,
+.table-info tr,
+.table-info td {
+    border: 0.01px solid black;
+    border-collapse: collapse;
+    margin-top: -18px;
+    page-break-inside: avoid;
+    /* width: 280px; */
+}
+
+.table-info2 {
+    width: 100%;
+    page-break-inside: avoid;
+}
+
+.table-info2,
+.table-info2 tr,
+.table-info2 td {
+    border: 0.01px solid black;
+    border-collapse: collapse;
+    page-break-inside: avoid;
+    /* width: 280px; */
+    margin-top: 12px;
+}
+
+.table-legenda,
+.table-legenda tr,
+.table-legenda td {
+    border: 0.01px solid black;
+    border-collapse: collapse;
+    margin-top: 5px;
+    page-break-inside: avoid;
+    margin-bottom: 5px;
+}
+
+.table-resumo {
+    width: 100%;
+    page-break-inside: avoid;
+    border-collapse: collapse;
+    border: 0;
+}
+
+.table-resumo tr,
+.table-resumo td {
+    border: 0.01px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.table-bottom {
+    width: 100%;
+    background-color: white;
+}
+
+td .empty {
+    border: 0.01px solid transparent;
+    border-right: 0.01px solid black;
+}
+#impressao {
+    position: relative;
+    text-align: end;
+}

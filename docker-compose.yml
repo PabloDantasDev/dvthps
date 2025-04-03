@@ -1,0 +1,23 @@
+services:
+  db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE:  techpsjornada_dev
+
+  apache:
+    build: .
+    container_name: dev_techps_apache
+    volumes:
+        - .:/var/www/html/braso/
+    ports:
+      - 80:80
+
+  adminer:
+    image: adminer
+    volumes:
+      - .:/var/www/html/braso/
+    environment:
+      UPLOAD: 4096M
+    ports:
+      - 8000:8080
